@@ -1,3 +1,9 @@
+import { Home } from "./components/Home/Home";
+
 export const App = () => {
-  return <div>Medi4Sure</div>;
+  return (
+    <div>
+      <Home />
+    </div>
+  );
 };
