@@ -5,7 +5,7 @@ export const Feedback = () => {
   return (
     <Form>
       <Form.Control
-        placeholder="Enter the Title"
+        placeholder="Enter the Title..."
         className="fbrow"
       ></Form.Control>
       <Form.Control
