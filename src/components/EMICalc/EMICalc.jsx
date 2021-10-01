@@ -9,13 +9,13 @@ export const EMICalc = () => {
       className="mb-3"
     >
       <Tab eventKey="homeloan" title="Home Loan">
-        <LoanItem />
+        <LoanItem type="Home" />
       </Tab>
       <Tab eventKey="personalloan" title="Personal Loan">
-        <p>Tab2</p>
+        <LoanItem type="Personal" />
       </Tab>
       <Tab eventKey="carloan" title="Car Loan">
-        <p>Tab3</p>
+        <LoanItem type="Car" />
       </Tab>
     </Tabs>
   );
