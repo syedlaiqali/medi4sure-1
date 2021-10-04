@@ -2,6 +2,7 @@ import { Tabs, Tab } from "react-bootstrap";
 import { LoanItem } from "../EMICalc/LoanItem";
 
 export const EMICalc = () => {
+  console.log("Hey I am in EMICalc");
   return (
     <Tabs
       defaultActiveKey="profile"
