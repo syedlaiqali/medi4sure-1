@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Row, Col, Form, Button } from "react-bootstrap";
+import { HeaderForComp } from "../Common/HeaderForComp";
 import "./Feedback.css";
 
 export const Feedback = () => {
@@ -9,9 +10,7 @@ export const Feedback = () => {
   };
   return (
     <Form>
-      <p>
-        <span>{val}</span>
-      </p>
+      <HeaderForComp title="Feedback" />
       <Form.Control
         placeholder="Enter the Title..."
         className="fbrow"
