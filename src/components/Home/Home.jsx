@@ -6,11 +6,6 @@ import { HeaderForComp } from "../Common/HeaderForComp";
 export const Home = () => {
   return (
     <div>
-      <HeaderForComp title="EMI Calculator" />
-      <EMICalc />
-      <HeaderForComp title="Feedback" />
-      <Feedback />
-      <HeaderForComp title="Medicare Updates" />
       <MediUpdates />
     </div>
   );
