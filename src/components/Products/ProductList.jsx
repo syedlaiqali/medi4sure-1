@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import { Link } from "react-router-dom";
-import { Button } from "react-bootstrap";
+import { Row, Col } from "react-bootstrap";
 import { ProductItem } from "./ProductItem";
 
 export const ProductList = () => {
@@ -11,12 +10,17 @@ export const ProductList = () => {
     axios
       .get("https://fakestoreapi.com/products")
       .then((res) => setData([...res.data]));
-    console.log("In Component Mount");
   }, []);
 
+  console.log("==>", data);
   return (
-    <div>
-      {data.length > 0 && data.map((item) => <ProductItem item={item} />)}
-    </div>
+    <Row>
+      {data.length > 0 &&
+        data.map((item) => (
+          <Col lg={3}>
+            <ProductItem item={item} />
+          </Col>
+        ))}
+    </Row>
   );
 };
