@@ -6,17 +6,19 @@ export const ProductItem = ({ item }) => {
   return (
     <Card
       style={{
-        width: "18rem",
         margin: "5px",
         backgroundColor: "lightblue",
       }}
     >
-      <Card.Img variant="top" src={item.image} />
+      <Card.Img variant="top" src={item.image} style={{ height: "200px" }} />
       <Card.Body>
-        <Card.Title>{item.title}</Card.Title>
-        <Card.Text>{`${item.description
+        <Card.Title>{`${item.title
           .split("")
-          .slice(0, 200)
+          .slice(0, 20)
+          .join("")}...`}</Card.Title>
+        <Card.Text className="containerDesc">{`${item.description
+          .split("")
+          .slice(0, 150)
           .join("")}...`}</Card.Text>
         <Button variant="primary">View Details</Button>
       </Card.Body>
