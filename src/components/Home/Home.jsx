@@ -1,8 +1,9 @@
+import React from "react";
 import { MediUpdates } from "./MediUpdates";
 export const Home = () => {
   return (
-    <div>
+    <React.Fragment>
       <MediUpdates />
-    </div>
+    </React.Fragment>
   );
 };
