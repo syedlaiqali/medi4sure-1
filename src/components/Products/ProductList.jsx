@@ -9,16 +9,17 @@ export const ProductList = () => {
   const [srchData, setSrchData] = useState([]);
   const [searchText, setSearchText] = useState("");
 
-  useEffect(() => {
-    axios.get("https://fakestoreapi.com/products").then((res) => {
-      setData([...res.data]);
-      setSrchData([...res.data]);
-    });
+  useEffect(async () => {
+    const result = await axios.get("https://fakestoreapi.com/products");
+    setData([...result.data]);
+    setSrchData([...result.data]);
   }, []);
 
   useEffect(() => {
     const filter = data.filter(
-      (item) => item.title.toUpperCase().includes(searchText.toUpperCase()) > 0
+      (item) =>
+        item.title.toUpperCase().includes(searchText.toUpperCase()) > 0 ||
+        item.description.toUpperCase().includes(searchText.toUpperCase()) > 0
     );
     setSrchData([...filter]);
   }, [searchText]);

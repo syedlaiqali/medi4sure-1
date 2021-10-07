@@ -3,6 +3,7 @@ import { Home } from "./components/Home/Home";
 import { EMICalc } from "./components/EMICalc/EMICalc";
 import { Feedback } from "./components/Feedback/Feedback";
 import { ProductList } from "./components/Products/ProductList";
+import { ProductDetails } from "./components/Products/ProductDetails";
 import "./App.css";
 import React from "react";
 
@@ -31,6 +32,9 @@ export const App = () => {
           </Route>
           <Route path="/products" exact>
             <ProductList />
+          </Route>
+          <Route path="/productdetails">
+            <ProductDetails />
           </Route>
           <Route path="/">
             <Home />
