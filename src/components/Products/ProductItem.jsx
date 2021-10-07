@@ -1,8 +1,14 @@
 import React from "react";
 import { Card, Button } from "react-bootstrap";
+import { Link, useLocation } from "react-router-dom";
 import "./ProductItem.css";
 
+function useQuery() {
+  return new URLSearchParams(useLocation().search);
+}
 export const ProductItem = ({ item }) => {
+  let query = useQuery();
+  query.append("prodId", 4);
   return (
     <React.Fragment>
       <Card
@@ -21,7 +27,14 @@ export const ProductItem = ({ item }) => {
             .split("")
             .slice(0, 150)
             .join("")}...`}</Card.Text>
-          <Button variant="primary">View Details</Button>
+          <Link to={`/productdetails?prodId=${item.id}`}>
+            <Button variant="primary" className="button">
+              View Details
+            </Button>
+          </Link>
+          <Button variant="primary" className="button">
+            Buy Now
+          </Button>
         </Card.Body>
       </Card>
     </React.Fragment>
