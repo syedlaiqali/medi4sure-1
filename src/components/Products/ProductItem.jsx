@@ -33,7 +33,7 @@ export const ProductItem = ({ item }) => {
             </Button>
           </Link>
           <Button variant="primary" className="button">
-            Buy Now
+            Add Cart
           </Button>
         </Card.Body>
       </Card>
